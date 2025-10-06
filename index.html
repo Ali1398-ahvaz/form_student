@@ -75,7 +75,7 @@
       </div>
       <div>
         <h1>فرم برنامه‌ریزی مطالعه هفتگی پایه هفتم</h1>
-        <p>لطفاً برای هر نوبت، ابتدا درس و سپس زمان مطالعه را انتخاب کنید.</p>
+        <p>برای هر نوبت، ابتدا درس را انتخاب کنید و سپس زمان مطالعه را مشخص نمایید.</p>
       </div>
     </header>
 
@@ -114,7 +114,10 @@
             <option>۱۹ تا ۲۲ شب</option>
             <option>۲۲ تا ۲۳ شب</option>
           `;
-          const cell = `<select>${lessons}</select><br><select>${times}</select>`;
+          const cell = `
+            <select>${lessons}</select><br>
+            <select>${times}</select>
+          `;
           document.write(days.map(day => `
             <tr>
               <td>${day}</td>
@@ -131,3 +134,4 @@
   </div>
 </body>
 </html>
+
