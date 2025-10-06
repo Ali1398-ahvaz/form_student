@@ -2,307 +2,118 @@
 <html lang="fa" dir="rtl">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width,initial-scale=1">
-  <title>فرم گزارش برنامه‌ریزی مطالعه هفتگی پایه هفتم – مدرسه رضوی</title>
-  <link href="https://cdn.fontcdn.ir/Font/Persian/Vazir/Vazir.css" rel="stylesheet" type="text/css" />
+  <title>فرم برنامه‌ریزی مطالعه هفتگی پایه هفتم</title>
+  <link href="https://cdn.fontcdn.ir/Font/Persian/Vazir/Vazir.css" rel="stylesheet">
   <style>
-    :root{
-      --primary:#165788;
-      --accent:#1fb97a;
-      --muted:#6b7a8a;
-      --card:#ffffff;
-      --paper:#f6fbff;
-      --shadow: 0 6px 18px rgba(20,32,50,0.08);
-    }
-    *{box-sizing:border-box}
     body {
       font-family: 'Vazir', sans-serif;
-      background: linear-gradient(180deg,var(--paper), #f0f6fb);
-      margin: 18px;
+      background: #f0f6fb;
+      margin: 20px;
       color: #143243;
-      direction: rtl;
     }
     .container {
       max-width: 1000px;
-      margin: 18px auto;
-      background: linear-gradient(180deg, rgba(255,255,255,0.85), rgba(255,255,255,0.95));
+      margin: auto;
+      background: #fff;
+      padding: 20px;
       border-radius: 12px;
-      padding: 18px;
-      box-shadow: var(--shadow);
-      border: 1px solid rgba(20,32,50,0.04);
+      box-shadow: 0 6px 18px rgba(20,32,50,0.08);
     }
     header {
-      display:flex;
-      gap:16px;
-      align-items:center;
-      justify-content:center;
-      padding: 8px 12px;
-      border-bottom: 1px dashed rgba(20,32,50,0.04);
-      margin-bottom: 12px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 16px;
+      margin-bottom: 20px;
     }
-    .logo {
-      width:86px;
-      height:86px;
-      flex: 0 0 86px;
+    .logo img {
+      width: 86px;
+      height: 86px;
       border-radius: 12px;
-      overflow:hidden;
       box-shadow: 0 6px 14px rgba(10,20,30,0.06);
-      background: white;
-      display:flex;
-      align-items:center;
-      justify-content:center;
-      padding:6px;
     }
-    .logo img{max-width:100%; max-height:100%; display:block}
-    .title {
-      text-align:center;
-    }
-    .title h1 {
-      margin:0;
-      font-size:18px;
-      letter-spacing:0.2px;
-      color:var(--primary);
-    }
-    .title p {
-      margin:4px 0 0 0;
-      color:var(--muted);
-      font-size:13px;
-    }
-    .meta {
-      display:flex;
-      gap:12px;
-      justify-content:center;
-      align-items:center;
-      margin:12px 0 20px 0;
-      flex-wrap:wrap;
-    }
-    .meta .field {
-      background: #fff;
-      padding:8px 12px;
-      border-radius:10px;
-      box-shadow: 0 6px 14px rgba(10,20,30,0.03);
-      border:1px solid rgba(20,32,50,0.03);
-      min-width:150px;
-    }
-    label{
-      display:block;
-      font-size:12px;
-      color:var(--muted);
-      margin-bottom:6px;
-    }
-    input[type="text"], select {
-      width:100%;
-      padding:8px 10px;
-      border-radius:8px;
-      border:1px solid rgba(20,32,50,0.08);
-      font-size:14px;
-      background: #fbfeff;
-      outline:none;
-    }
-    .table-wrap {
-      overflow:auto;
-      margin-top:8px;
+    h1 {
+      font-size: 18px;
+      color: #165788;
+      margin: 0;
     }
     table {
-      width:100%;
-      border-collapse:collapse;
-      min-width:780px;
-      background:var(--card);
-      border-radius:10px;
-      overflow:hidden;
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 20px;
     }
-    thead th {
-      background: linear-gradient(90deg, rgba(22,87,136,0.06), rgba(31,185,122,0.03));
-      color:var(--primary);
-      padding:12px 10px;
-      font-weight:700;
-      text-align:center;
-      font-size:14px;
-      border-bottom:1px solid rgba(20,32,50,0.04);
+    th, td {
+      border: 1px solid #d0e0f0;
+      padding: 10px;
+      text-align: center;
     }
-    tbody td {
-      padding:10px;
-      border-bottom:1px dashed rgba(20,32,50,0.04);
-      text-align:center;
-      vertical-align:middle;
-      font-size:14px;
+    th {
+      background: #e6f3fb;
+      color: #165788;
     }
-    tbody tr:last-child td{border-bottom:none}
-    input.cell-input{
-      width:100%;
-      padding:8px;
-      border-radius:8px;
-      border:1px solid rgba(20,32,50,0.06);
-      background:transparent;
-      text-align:right;
-      font-size:14px;
+    select, textarea {
+      width: 100%;
+      padding: 8px;
+      border-radius: 8px;
+      border: 1px solid #ccc;
+      font-family: 'Vazir', sans-serif;
+      font-size: 14px;
     }
-    .actions {
-      display:flex;
-      gap:12px;
-      justify-content:center;
-      margin-top:16px;
-      flex-wrap:wrap;
-    }
-    .btn {
-      display:inline-block;
-      padding:10px 16px;
-      border-radius:10px;
-      text-decoration:none;
-      font-weight:700;
-      box-shadow: 0 6px 14px rgba(10,20,30,0.04);
-      border: none;
-      cursor:pointer;
-    }
-    .btn-print {
-      background: linear-gradient(180deg, #eef6fb, #e6f3fb);
-      color: var(--primary);
-      border:1px solid rgba(22,87,136,0.08);
-    }
-    .btn-ws {
-      background: linear-gradient(180deg, #22c35e, #1aa053);
-      color:white;
-    }
-    /* responsive */
-    @media (max-width:900px){
-      .container{padding:12px}
-      .logo{width:66px;height:66px;flex:0 0 66px}
-      table{min-width:680px}
-    }
-    @media (max-width:640px){
-      header{flex-direction:column;gap:8px}
-      .meta{flex-direction:column;align-items:stretch}
-      table{min-width:600px}
-      .container{margin:8px}
-    }
-    /* print styles */
-    @media print {
-      body{margin:0; background:white}
-      .container{box-shadow:none; border:none; margin:0; border-radius:0}
-      .actions, .meta {display:none}
-      header{border-bottom:none}
-      table {page-break-inside:auto}
-      tr    {page-break-inside:avoid; page-break-after:auto}
+    textarea {
+      resize: vertical;
+      height: 60px;
     }
   </style>
 </head>
 <body>
-  <div class="container" role="main" aria-label="فرم گزارش برنامه‌ریزی مطالعه هفتگی">
+  <div class="container">
     <header>
-      <div class="logo" aria-hidden="true">
-        <img src="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQEAeAB4AAD/2wBDAAIBAQIBAQICAgICAgICAwUDAwMDAwYEBAMFBwYHBwcGBwcICQsJCAgKCAcHCg0KCgsMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAz/wAALCAABAAEBAREA/8QAFQABAQAAAAAAAAAAAAAAAAAAAAb/xAAUEAEAAAAAAAAAAAAAAAAAAAAA/8QAFQEBAQAAAAAAAAAAAAAAAAAAAgP/xAAUEQEAAAAAAAAAAAAAAAAAAAAA/9oADAMBAAIRAxEAPwD8f//Z" alt="لوگو مدرسه رضوی">
+      <div class="logo">
+        <img src="https://files.virgool.io/upload/users/1605210/posts/n8ihxhpij7op/ku69kkvrogtv.jpg" alt="آرم آموزش و پرورش ناحیه ۱ اهواز">
       </div>
-      <div class="title">
-        <h1>فرم گزارش برنامه‌ریزی مطالعه هفتگی پایه هفتم – مدرسه رضوی</h1>
-        <p>لطفاً موارد هر روز را در کادرها وارد کنید. ستون «توضیحات» برای یادداشت‌های معلم/والد است.</p>
+      <div>
+        <h1>فرم برنامه‌ریزی مطالعه هفتگی پایه هفتم</h1>
+        <p>لطفاً زمان‌های مطالعه را انتخاب کرده و در صورت نیاز توضیحاتی بنویسید.</p>
       </div>
     </header>
 
-    <div class="meta" aria-hidden="false">
-      <div class="field" style="min-width:220px;">
-        <label for="student-name">نام و نام خانوادگی</label>
-        <input id="student-name" type="text" placeholder="مثلاً: علی رضایی">
-      </div>
-      <div class="field" style="min-width:160px;">
-        <label for="class">کلاس / پایه</label>
-        <input id="class" type="text" placeholder="مثلاً: هفتم - 2">
-      </div>
-      <div class="field" style="min-width:180px;">
-        <label for="term">دوره / بازه</label>
-        <input id="term" type="text" placeholder="مثلاً: هفته اول مهر 1404">
-      </div>
-    </div>
-
-    <div class="table-wrap" role="region" aria-label="جدول برنامه‌ریزی">
-      <table>
-        <thead>
-          <tr>
-            <th>روز هفته</th>
-            <th>زمان اول مطالعه</th>
-            <th>زمان دوم مطالعه</th>
-            <th>زمان سوم مطالعه</th>
-            <th>زمان جبرانی (توسط ولی)</th>
-            <th>توضیحات</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td>شنبه</td>
-            <td><input class="cell-input" value="ریاضی"></td>
-            <td><input class="cell-input" value="مطالعات"></td>
-            <td><input class="cell-input" value="ادبیات"></td>
-            <td><input class="cell-input" placeholder="اختیاری"></td>
-            <td><input class="cell-input" placeholder="توضیحات..."></td>
-          </tr>
-          <tr>
-            <td>یک‌شنبه</td>
-            <td><input class="cell-input" value="علوم"></td>
-            <td><input class="cell-input" value="پیام‌های آسمان"></td>
-            <td><input class="cell-input" value="عربی"></td>
-            <td><input class="cell-input" placeholder="اختیاری"></td>
-            <td><input class="cell-input" placeholder="توضیحات..."></td>
-          </tr>
-          <tr>
-            <td>دوشنبه</td>
-            <td><input class="cell-input" value="ریاضی"></td>
-            <td><input class="cell-input" value="علوم"></td>
-            <td><input class="cell-input" value="عربی"></td>
-            <td><input class="cell-input" placeholder="اختیاری"></td>
-            <td><input class="cell-input" placeholder="توضیحات..."></td>
-          </tr>
-          <tr>
-            <td>سه‌شنبه</td>
-            <td><input class="cell-input" value="زبان انگلیسی"></td>
-            <td><input class="cell-input" value="ریاضی"></td>
-            <td><input class="cell-input" value="نگارش"></td>
-            <td><input class="cell-input" placeholder="اختیاری"></td>
-            <td><input class="cell-input" placeholder="توضیحات..."></td>
-          </tr>
-          <tr>
-            <td>چهارشنبه</td>
-            <td><input class="cell-input" value="علوم"></td>
-            <td><input class="cell-input" value="ادبیات"></td>
-            <td><input class="cell-input" value="مطالعات"></td>
-            <td><input class="cell-input" placeholder="اختیاری"></td>
-            <td><input class="cell-input" placeholder="توضیحات..."></td>
-          </tr>
-          <tr>
-            <td>پنج‌شنبه</td>
-            <td><input class="cell-input" value="پیام‌های آسمان"></td>
-            <td><input class="cell-input" value="مطالعات"></td>
-            <td><input class="cell-input" value="زبان انگلیسی"></td>
-            <td><input class="cell-input" placeholder="اختیاری"></td>
-            <td><input class="cell-input" placeholder="توضیحات..."></td>
-          </tr>
-          <tr>
-            <td>جمعه</td>
-            <td><input class="cell-input" value="مرور و جمع‌بندی"></td>
-            <td><input class="cell-input" value="مرور و جمع‌بندی"></td>
-            <td><input class="cell-input" value="مرور و جمع‌بندی"></td>
-            <td><input class="cell-input" placeholder="اختیاری"></td>
-            <td><input class="cell-input" placeholder="توضیحات..."></td>
-          </tr>
-        </tbody>
-      </table>
-    </div>
-
-    <div class="actions">
-      <button class="btn btn-print" onclick="window.print()" title="چاپ فرم">🖨 چاپ</button>
-      <a class="btn btn-ws" id="whatsappBtn" href="https://wa.me/989336589157" target="_blank" rel="noopener" title="ارسال از طریق واتساپ">💬 ارسال به واتساپ</a>
-    </div>
-
-    <script>
-      (function(){
-        const whatsappBtn = document.getElementById('whatsappBtn');
-        whatsappBtn.addEventListener('click', function(e){
-          var name = document.getElementById('student-name').value.trim() || 'نام درج نشده';
-          var cls = document.getElementById('class').value.trim() || 'کلاس درج نشده';
-          var term = document.getElementById('term').value.trim() || '';
-          var base = encodeURIComponent('فرم گزارش برنامه‌ریزی مطالعه\nنام: ' + name + '\nکلاس: ' + cls + '\n' + term + '\n(برای جزئیات کامل لطفاً فرم پیوست را ارسال کنید)');
-          this.href = 'https://wa.me/989336589157?text=' + base;
-        });
-      })();
-    </script>
+    <table>
+      <thead>
+        <tr>
+          <th>روز هفته</th>
+          <th>زمان اول مطالعه</th>
+          <th>زمان دوم مطالعه</th>
+          <th>زمان سوم مطالعه</th>
+          <th>زمان جبرانی (ولی)</th>
+          <th>توضیحات</th>
+        </tr>
+      </thead>
+      <tbody>
+        <!-- تکرار برای هر روز هفته -->
+        <script>
+          const days = ['شنبه', 'یک‌شنبه', 'دوشنبه', 'سه‌شنبه', 'چهارشنبه', 'پنج‌شنبه', 'جمعه'];
+          const options = `
+            <option value="">انتخاب کنید</option>
+            <option>۷ تا ۱۰ صبح</option>
+            <option>۱۰ تا ۱۳ ظهر</option>
+            <option>۱۳ تا ۱۶ عصر</option>
+            <option>۱۶ تا ۱۹ عصر</option>
+            <option>۱۹ تا ۲۲ شب</option>
+            <option>۲۲ تا ۲۳ شب</option>
+          `;
+          document.write(days.map(day => `
+            <tr>
+              <td>${day}</td>
+              <td><select>${options}</select></td>
+              <td><select>${options}</select></td>
+              <td><select>${options}</select></td>
+              <td><select>${options}</select></td>
+              <td><textarea placeholder="توضیحات ولی..."></textarea></td>
+            </tr>
+          `).join(''));
+        </script>
+      </tbody>
+    </table>
   </div>
 </body>
 </html>
