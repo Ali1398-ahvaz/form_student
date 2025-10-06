@@ -46,6 +46,7 @@
       border: 1px solid #d0e0f0;
       padding: 10px;
       text-align: center;
+      vertical-align: top;
     }
     th {
       background: #e6f3fb;
@@ -58,6 +59,7 @@
       border: 1px solid #ccc;
       font-family: 'Vazir', sans-serif;
       font-size: 14px;
+      margin-bottom: 6px;
     }
     textarea {
       resize: vertical;
@@ -73,7 +75,7 @@
       </div>
       <div>
         <h1>فرم برنامه‌ریزی مطالعه هفتگی پایه هفتم</h1>
-        <p>لطفاً زمان‌های مطالعه را انتخاب کرده و در صورت نیاز توضیحاتی بنویسید.</p>
+        <p>لطفاً برای هر نوبت، ابتدا درس و سپس زمان مطالعه را انتخاب کنید.</p>
       </div>
     </header>
 
@@ -81,19 +83,30 @@
       <thead>
         <tr>
           <th>روز هفته</th>
-          <th>زمان اول مطالعه</th>
-          <th>زمان دوم مطالعه</th>
-          <th>زمان سوم مطالعه</th>
-          <th>زمان جبرانی (ولی)</th>
+          <th>نوبت اول</th>
+          <th>نوبت دوم</th>
+          <th>نوبت سوم</th>
+          <th>جبرانی (ولی)</th>
           <th>توضیحات</th>
         </tr>
       </thead>
       <tbody>
-        <!-- تکرار برای هر روز هفته -->
         <script>
           const days = ['شنبه', 'یک‌شنبه', 'دوشنبه', 'سه‌شنبه', 'چهارشنبه', 'پنج‌شنبه', 'جمعه'];
-          const options = `
-            <option value="">انتخاب کنید</option>
+          const lessons = `
+            <option value="">درس را انتخاب کنید</option>
+            <option>ریاضی</option>
+            <option>علوم</option>
+            <option>ادبیات</option>
+            <option>عربی</option>
+            <option>مطالعات اجتماعی</option>
+            <option>زبان انگلیسی</option>
+            <option>نگارش</option>
+            <option>پیام‌های آسمان</option>
+            <option>مرور و جمع‌بندی</option>
+          `;
+          const times = `
+            <option value="">زمان را انتخاب کنید</option>
             <option>۷ تا ۱۰ صبح</option>
             <option>۱۰ تا ۱۳ ظهر</option>
             <option>۱۳ تا ۱۶ عصر</option>
@@ -101,13 +114,14 @@
             <option>۱۹ تا ۲۲ شب</option>
             <option>۲۲ تا ۲۳ شب</option>
           `;
+          const cell = `<select>${lessons}</select><br><select>${times}</select>`;
           document.write(days.map(day => `
             <tr>
               <td>${day}</td>
-              <td><select>${options}</select></td>
-              <td><select>${options}</select></td>
-              <td><select>${options}</select></td>
-              <td><select>${options}</select></td>
+              <td>${cell}</td>
+              <td>${cell}</td>
+              <td>${cell}</td>
+              <td>${cell}</td>
               <td><textarea placeholder="توضیحات ولی..."></textarea></td>
             </tr>
           `).join(''));
